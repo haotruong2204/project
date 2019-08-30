@@ -19,6 +19,6 @@ test:
 
 production:
   <<: *default
-  database: vnbook_production
-  username: vnbook
-  password: <%= ENV["VNBOOK_PASSWORD"] %>
+  database: ENV['DATABASE_URL']
+  username: ENV['VNBOOK_DATABASE_USERNAME']
+  password: ENV['VNBOOK_DATABASE_PASSWORD']
