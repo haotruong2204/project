@@ -1,0 +1,68 @@
+<aside class="main-sidebar">
+  <section class="sidebar">
+    <ul class="sidebar-menu" data-widget="tree">
+      <li class="<%= 'active' if controller_name == 'top_pages' %>">
+        <%= link_to admin_root_path do %>
+          <span>Dashboard</span>
+        <% end %>
+      </li>
+      <li class="treeview menu-open">
+        <a href="#"><span>Bookreviews</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu" style="display: block;">
+          <li class="<%= 'active' if controller_name == 'dashboard' %>">
+            <%= link_to "#" do %>
+              <i class="fa fa-book"></i>
+              <span><%= t(".reviews-book") %></span>
+            <% end %>
+          </li>
+          <li class="<%= 'active' if controller_name == 'dashboard' %>">
+            <%= link_to "#" do %>
+              <i class="fa fa-align-justify"></i>
+              <span><%= t(".category") %></span>
+            <% end %>
+          </li>
+        </ul>
+      </li>
+      <li class="treeview menu-open">
+        <a href="#"><span><%= t(".manage") %></span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu" style="display: block;">
+          <li class="<%= 'active' if controller_name == 'dashboard' %>">
+            <%= link_to "#" do %>
+              <i class="fa fa-users"></i>
+              <span><%= t(".manage-user") %></span>
+            <% end %>
+          </li>
+        </ul>
+      </li>
+      <li class="treeview menu-open">
+        <a href="#"><span><%= t(".history") %></span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu" style="display: block;">
+          <li class="<%= 'active' if controller_name == 'dashboard' %>">
+            <%= link_to "#" do %>
+              <i class="fa fa-history"></i>
+              <span><%= t(".history-admin") %></span>
+            <% end %>
+          </li>
+          <li class="<%= 'active' if controller_name == 'dashboard' %>">
+            <%= link_to "#" do %>
+              <i class="fa fa-history"></i>
+              <span><%= t(".history-user") %></span>
+            <% end %>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+</aside>

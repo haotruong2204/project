@@ -1,0 +1,33 @@
+<div class="login-box" id="login_admin_form">
+  <div class="login-logo">
+    Vnbook
+  </div>
+  <div class="login-box-body">
+    <%= render "shared/flash" %>
+    <div class="admin-login-area form-unauthenticate">
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="form-group has-feedback">
+          <label class="label-lg" for="admin_email">Email</label>
+          <%= f.email_field :email, autofocus: true, class: "form-control" %>
+          <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+        </div>
+        <div class="form-group has-feedback">
+          <label class="label-lg" for="admin_password">Password</label>
+          <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
+          <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+        </div>
+        <% if devise_mapping.rememberable? %>
+          <div class="field">
+            <%= f.check_box :remember_me %>
+            <%= f.label :remember_me %>
+          </div>
+        <% end %>
+        <div class="form-group">
+          <%= f.submit "Submit",
+            class: "form-control btn btn-primary btn-block btn-flat btn-admin-login btn-submit-form" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<% content_for :body_class, "hold-transition login-page" %>

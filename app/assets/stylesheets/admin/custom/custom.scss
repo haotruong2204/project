@@ -1,0 +1,64 @@
+.box {
+  border-top: 0px !important;
+ }
+
+.margin-top-20px {
+ margin-top: 20px;
+}
+
+.no-padding {
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}
+
+.margin-left-15px {
+  margin-left: 15px;
+}
+
+.product-status-select {
+  width: 100px !important;
+}
+.no-search-result {
+  clear: both;
+}
+.logo-page-login {
+  width: 100px;
+}
+.image-thumb {
+  width: 50px;
+}
+/*Show review boook*/
+.book-title {
+  h1 {
+    color: #606060;
+    /*text-transform: uppercase;*/
+    font-size: 28px;
+    letter-spacing: 3px;
+    line-height: 1.2;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 500;
+  }
+}
+.book-content {
+  h4 {
+    font-size: 17px;
+    font-weight: bold;
+    padding: 10px 0;
+  }
+  blockquote {
+    margin: 1.6rem 0;
+    background: inherit;
+    color: #2bbc8a;
+    padding-left: 15px;
+    border-left: 3px solid #2bbc8a;
+  }
+  h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #d25801;
+  }
+}
+.book-footer {
+  color: #d25801;
+}
