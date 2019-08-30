@@ -20,5 +20,3 @@ test:
 production:
   <<: *default
   database: vnbook_production
-  username: vnbook
-  password: ENV['VNBOOK_DATABASE_PASSWORD']
