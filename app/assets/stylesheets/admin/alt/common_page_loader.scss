@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+$grey: #6A6B6D;
+$blue: #89ABE3;
+$red: #DD0E1B;
+$white: #fff;
+$black: #000;
+$orange: #e67e22;
+$green: #2ecc71;
+
+$color-london: #C00;
+$color-losangels: #f90;
+$color-sanfrancisco: #ff4000;
+$color-boston: #036;
+$color-newyork: #f44336;
+$color-us: #383c3c;
+$color-sydney: #0085B2;
+$color-tokyo-summer: #390;
+$color-tokyo-winter: #8B4513;
+$color-osaka-summer: #c6d219;
+$color-exchange: #877f3d;
+
+//Darken
+$darken-grey: #2A2B2D;
+$darken-blue: #3A50C9;
+
+//Darkest
+$darkest-grey: #1A1B1D;
+$darkest-blue: #1c2b36;
+
+//Lighten
+$lighten-grey: #9A9B9D;
+$lighten-red: lighten($red, 10%);
+
+//Lighter
+
+//Lightest
+$lightest-grey: #d8d8d8;
+$lightest-blue: #c0ccd5;
+$lightest-green: #e9f5e6;
+
+//Inherits
+$grey-lightest: $lightest-grey;
+$grey-light: $lighten-grey;
+
+$grey-dark: $darken-grey;
+$grey-darkest: $darkest-grey;
+
+$blue-lightest: $lightest-blue;
+$blue-dark: $darken-blue;
+$blue-darkest: $darkest-blue;
+
+@mixin prefixer(
+  $property,
+  $value,
+  $prefixes: ()
+) {
+  @each $prefix in $prefixes {
+    #{"-" + $prefix + "-" + $property}: $value;
+  }
+  #{$property}: $value;
+}
+
+@mixin animation-delay($times...) {
+  //@include _bourbon-deprecate-for-prefixing("animation-delay");
+
+  @include prefixer(animation-delay, $times, webkit moz spec);
+}
+
+
+@mixin animation($animations...) {
+  //@include _bourbon-deprecate-for-prefixing("animation");
+
+  @include prefixer(animation, $animations, webkit moz spec);
+}

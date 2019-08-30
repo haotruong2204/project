@@ -1,0 +1,34 @@
+<header class="main-header">
+  <%= link_to admin_root_path, class: "logo" do %>
+    <span class="logo-lg">Bookreviews</span>
+  <% end %>
+  <nav class="navbar navbar-static-top">
+    <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+      <span class="sr-only">Toggle navigation</span>
+    </a>
+    <div class="navbar-custom-menu">
+      <ul class="nav navbar-nav">
+        <li class="dropdown user user-menu">
+          <a href="#" class="dropdown-toggle navbar-username" data-toggle="dropdown">
+            <%= image_tag "default-profile-image.png", class: "user-image" %>
+            <span class="hidden-xs">
+              <%= current_admin_admin.email %>
+            </span>
+          </a>
+          <ul class="dropdown-menu">
+            <li class="user-body">
+              <div class="row">
+                <div class="col-xs-12">
+                  <%= link_to destroy_admin_admin_session_path do %>
+                    <i class="fa fa-fw fa-sign-out"></i>
+                    Logout
+                  <% end %>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>

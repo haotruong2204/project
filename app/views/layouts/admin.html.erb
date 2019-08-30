@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" %>
+  <%= stylesheet_link_tag    "https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <!-- <%= javascript_include_tag Ckeditor.cdn_url %> -->
+  <%= csrf_meta_tags %>
+</head>
+<body id="page-top" class="page-header-fixed page-sidebar-closed-hide-logo page-sidebar-closed-hide-logo">
+  <%= render "layouts/admin/header" %>
+  <div id="wrapper">
+    <%= render "layouts/admin/sidebar" %>
+    <div id="content-wrapper">
+      <%= yield %>
+      <%= render "layouts/admin/footer" %>
+    </div>
+  </div>
+</body>
+</html>
