@@ -19,5 +19,4 @@ test:
 
 production:
   <<: *default
-  database: vnbook_production
-  url: <%= ENV['DATABASE_URL'] %>
+  database: <%= ENV['DATABASE_URL'] %>
