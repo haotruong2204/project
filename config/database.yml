@@ -4,7 +4,7 @@ default: &default
   pool: 5
   username: root
   password:
-  localhost: localhost
+  localhost: 127.0.0.1
 
 development:
   <<: *default
